@@ -4,58 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mazen's home</title>
-    </head>
-    <style>
+        <style>
             body {
-                font-family: 'Times New Roman';
-                font-size: 30px;
-                max-width: 1100px;
-                margin-left: auto;
-                margin-right: auto;
-                color: #e0e0e0;
-                background: #0c0d0e;
-                font-style: bold;
-                margin:40px auto;
-                line-height:1.8;
-            }
-            .all {
-                border: 9px solid #81a2be;
-                border-radius: 25px;
-                background: #1b1f21;
-                margin: 30px 10px;
-                text-align: left;
-                padding:20px 5%;
+                color:#fff;
+                background:#0c0d0e;
+                margin:1em auto;
+                padding:1em;
+                max-width:50em;
+                font:20px monospace;
             }
             a {
-                color: #81a2be;
+                color:#a8f251;
+                text-decoration:none; 
             }
-            a:hover {
-                color: #8abeb7;
+            a:hover,.active-page {
+                color:#9b51f2;
             }
-            #first {
-                font-family:monospace;
-                font-size: 50px;
-                margin-top:0px;
-                margin-bottom: 0px;
+            nav {
+                font-size:23px; 
             }
-            .foot {
-                margin-top: 50px
-            }
-
-            
-    </style>
+        </style>
+    </head>
     <body>
-        <div class="all">
-            <h1 id="first"><em>Hi, fellas!</em></h1>
-            <div class="head">
-                <p>
-                Welcome to my <a href="https://motherfuckingwebsite.com/">humble</a> website.</br>Since I stopped using social media, except for some <a href='https://0x0.st/oiuh.txt'>zucced obscure platform</a> because my stupid university doesn't know how to use email, I decided to create a website to get plugged into the <em>matrix</em> whenever I want.
-                </p>
-            </div>
-            <div class="foot">
-            <hr style="margin-bottom: 0px">
-            <a href="setup.html"><em>setup</em></a>
-            </div>
-        </div>
+        <header>
+            <nav>
+                <a href="index.html" class="active-page">Home</a> | 
+                <a href="blogs.html">Blog</a> 
+            </nav>
+        </header>
+        <h1 id="first">Hi, I'm Mazen!</h1>
+        <p>
+        Welcome to my humble website.<br><br>Since I stopped using social media, except for some <a href='https://0x0.st/oiuh.txt'>zucced obscure platform</a> because my stupid university doesn't know how to use email, I decided to create a website to get plugged into the <em>matrix</em> whenever I want.<br><br>This thing was intended to be as minimal as possible. If it doesn't appeal to you, please read <a href="https://motherfuckingwebsite.com/">this</a>.
+        </p>
     </body>
 </html>
