@@ -46,6 +46,7 @@ p, li {
 	width: 49%;
 }
 
+@media only screen and (max-width: 768px) {
 .pane-right {
 width: 100%;
 }
@@ -53,7 +54,7 @@ width: 100%;
 .pane-left {
 	width: 100%;
 }
-
+}
 .right-panel li {
     margin-left: 0px;
 }
