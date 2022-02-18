@@ -1,0 +1,95 @@
+html {
+    background-image: url("imgs/pipes.png");
+}
+body {
+    background: #1d1f21;
+    padding: 20px;
+    color: #fffaff;
+    font-family: nimbus roman, serif;
+	margin: auto;
+	margin-top: 20px;	
+	margin-bottom: 20px;	
+	border: 3px solid #b3c7d8;
+	width: 89%;
+	max-width: 900px;
+	text-align: left;
+}
+
+h1 {
+	color: #b3c7d8; 
+	font-size: 55px;
+	text-align: center;
+	line-height: 90%;
+}
+
+h2 {
+	color: #b3c7d8; 
+}
+
+p, li {
+	font-size: 16px;
+	max-width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left-panel {
+	display: inline-block;
+	float: left;
+	margin: auto;
+	width: 49%;
+}
+
+.right-panel {
+	display: inline-block;
+	float: right;
+	width: 49%;
+}
+
+.pane-right {
+width: 100%;
+}
+
+.pane-left {
+	width: 100%;
+}
+
+.right-panel li {
+    margin-left: 0px;
+}
+
+.clear:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+hr {
+	margin: 0px;
+}
+
+a {
+	color: #b3c7d8;
+}
+
+a:hover {
+	color: #81a2be;
+}
+
+.icon {
+	float: left;
+	height: 35px;
+	margin-right: 10px;
+}
+
+.b-icon {
+	margin: auto;
+	display: inline-block;
+	text-align: center;
+	height: 35px;
+}
+.date {
+    font-size: 90%;
+    font-style: italic;
+    color: grey;
+}

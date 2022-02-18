@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Mazen's Blog</title>
+<description>Mazen's RSS feed.</description>
+<language>en-us</language>
+<link>https://mazzensaadd.github.io/rss.xml</link>
+<atom:link href="http://mazzensaadd.github.io/rss.xml" rel="self" type="application/rss+xml" />
+
+<!-- LB -->
+
+<item>
+<title>Why 12-hour clock is stupid</title>
+<guid>https://mazzensaadd.github.io/blog/why-12hour-clock-is-stupid.html</guid>
+<link>https://mazzensaadd.github.io/blog/why-12hour-clock-is-stupid.html</link>
+<pubDate>Thu, 20 Jan 2022 00:57:34 +0200</pubDate>
+<description><![CDATA[
+<p>
+        One thing that I don't really understand about the world is how people can make it unnecessarily complicated. It seems like us human beings tend to make things harder for ourselves <em>cuz we can</em>. 
+</p>
+<p>
+        Take the 12-hour clock system people use nowadays as an example. Why would any sufficiently working brain decide on dividing the 24 hours in the day into two 12s? By doing so, you are just adding more ambiguity to your lives. Now, people have to deal with A.M. and P.M. that they don't even know their meanings. Why would anyone assign a specific region of his brain to handle such stupid things? This is completely inefficient. Instead of doing this shit, just be a normal creature and divide your day into equal 24 parts and assign every one of them a number. Not only this will make it easier for kids and even adults to understand, but also it will solve the weird misunderstandings that arise from A.M. and P.M. conflicts.
+</p>
+<p>
+        I myself have always had a problem with the clock system since I was a kid. It was hard to remember what is what when it comes to A.M. and P.M. and I have always thought that this is only adding a complicity layer on something that was supposed to be simple. I'd ask adults around me if A.M. meant night or day and, for some reason, I was never able to remember the difference after a while.
+</p>
+<p>
+        The irony about the whole thing is that only a few portion people actually know what does A.M. and P.M. stand for. They both stand for the Latin words <em>"ante merīdiem"</em> and <em>"post merīdiem"</em> which I doubt that if I showed these words to anyone who uses the 12-hour format, he will be able to recognize it. 
+</p>
+<p>
+        I am using the 24-hour everywhere. My laptop, my phone, my watch, even this website is using the 24-hour system as a clock system. It's easier for me and helps preserve my brain computing power to be used in something more significant.
+</p>
+<p>
+        Please help the world become a better place and start using 24-hour clock. Peace out!
+</p>
+]]></description>
+</item>
+
+
+<item>
+<title>init</title>
+<guid>https://mazzensaadd.github.io/blog/init.html</guid>
+<link>https://mazzensaadd.github.io/blog/init.html</link>
+<pubDate>Wed, 19 Jan 2022 21:29:34 +0200</pubDate>
+<description><![CDATA[
+    <p>Hi Anon!<br>blog has been initialized...<br>Remember... all I'm offering is the truth. Nothing more. Welcome to the real world.</p>
+]]></description>
+</item>
+
+
+</channel>
+</rss>
+
