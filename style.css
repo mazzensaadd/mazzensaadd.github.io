@@ -33,38 +33,6 @@ p, li {
 	margin-right: auto;
 }
 
-.left-panel {
-	display: inline-block;
-	float: left;
-	margin: auto;
-	width: 49%;
-}
-
-.right-panel {
-	display: inline-block;
-	float: right;
-	width: 49%;
-}
-
-@media only screen and (max-width: 768px) {
-.pane-right {
-width: 100%;
-}
-
-.pane-left {
-	width: 100%;
-}
-}
-.right-panel li {
-    margin-left: 0px;
-}
-
-.clear:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 hr {
 	margin: 0px;
 }
@@ -93,4 +61,35 @@ a:hover {
     font-size: 90%;
     font-style: italic;
     color: grey;
+}
+.left-panel {
+	display: inline-block;
+	float: left;
+	margin: auto;
+	width: 49%;
+}
+
+.right-panel {
+	display: inline-block;
+	float: right;
+	width: 49%;
+}
+
+.right-panel li {
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+.right-panel {
+width: 100%;
+}
+
+.left-panel {
+	width: 100%;
+}
+}
+.clear:after {
+	content: "";
+	display: table;
+	clear: both;
 }
