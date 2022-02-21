@@ -99,3 +99,22 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+code {
+  font: monospace;
+  padding:0px;
+}
+pre {
+    margin:0px;
+	max-width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}

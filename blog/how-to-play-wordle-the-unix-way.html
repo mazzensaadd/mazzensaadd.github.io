@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>How to play Wordle the UNIX way</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<h1>How to play Wordle the UNIX way</h1>
+<p>
+Today, ladies and gentlemen, I will tell you my secret about how to win in <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>.
+<br>
+Here's what you will need:
+<ul>
+    <li>grep</li>
+    <li>basic understanding of regular expressions</li>
+    <li>a text file containing every word in the english dictionary. I got mine <a href="http://www.gwicks.net/justwords.html">here</a>.</li>
+</ul>
+</p>
+
+<h2>Background</h2>
+<p>
+Wordle is a new puzzle that is played all over the world nowadays. In the game, you're asked to guess a 5-letter word that you have no idea what would it be. You have 6 trials. Each trial, you guess a word and the game tells you what letters are in the right position, what letters are in the word but are in the wrong position and what letters aren't in the word at all. You should use your vocabulary to eliminate words until you find the correct one. Otherwise, you lose the game for that day.
+</p>
+
+<h2>What if I am lazy but willing to win?</h2>
+
+<p>
+If the title fits you, we're similar. Here's how I did it so that I can win every game. This is tested on 11 different Wordle levels and I won them all. I can assure you that I had no idea what does the words mean but I still won.
+</p>
+
+<p>
+First thing I did is getting an plain text English dictionary. Now, I have every word. I only need every 5-letter word letter right? Let's use 
+grep to get this done.
+</p>
+<p>
+<pre>
+    <code>
+$ grep "^.....$" dic.txt
+    </code>
+</pre>
+</p>
+<p>
+Noice, now we have every 5-letter word. Let's guess the first word. After watching 3Blue1Brown talk about using information theory to play Wordle, I decide to use his opening word, <b>crane</b>. My first guess had three wrong letters and two right ones but not in the right position.
+It looked like this.
+</p>
+<p>
+<pre>
+⬜💛⬜💛⬜
+</pre>
+</p>
+<p>
+I now know that the word contains 'r' and 'n' and doesn't contain 'c', 'a' or 'e'. Let's use this information. I filtered my words so that I get every word that contains 'r' and 'n' and doesn't contain any of [cae]. Here's the command that did so
+</p>
+<p>
+<pre>
+    <code>
+$ grep "^.....$" english3.txt | grep r | grep n |grep -v "[cae]" | grep -v ".r..." | grep -v "...n."
+    </code>
+</pre>
+</p>
+<p>
+Then, I used some common sense to choose a word to be my next guess. I guess this part can be optimized more but here's my convention: I
+look at the first letter in every word and choose the most repeated one. In this case, it was 'b'. After that, I look for the second most repeated character. When I find it, I try to find a word that starts with the first most repeated letter and has the second letter in it. My choice was <b>Burin</b>. Of course, I have no idea what the hell does this means. The second guess looked like this:
+</p>
+<p>
+<pre>
+⬜⬜💛⬜💚
+</pre>
+</p>
+<p>
+Now, this is some progress. I now know that the word ends with 'n'. So, let's filter again.
+</p>
+<p>
+<pre>
+    <code>
+grep "^....n$" english3.txt | grep r | grep n |grep -v "[caebui]" | grep -v ".r..." | grep -v "...n." | grep -v "..r.."
+    </code>
+</pre>
+</p>
+<p>
+At this point, I still have 4 trails left and my computer is telling me that the only <em>four</em> possible words are "doorn", "shorn", "sworn" and "thorn". Let's use some common sense again and try to do it efficiently. What is the best word to choose in this case? My choice was "shorn" because if the first letter is wrong, I will eliminate "sworn" and if the second letter was wrong, I will eliminate "thorn".
+I typed "shorn" and hit enter and here it was:
+</p>
+<p>
+<pre>
+⬜💚💚💚💚
+</pre>
+</p>
+<p>
+Every letter is perfectly right, except the first one. So I write the only world left that matches these criteria, "thorn", and hit enter. And voalá, I Won. Without knowing the meaning of any of the words mentioned except for "crane".
+</p>
+
+<p>
+Here's the full thing from the Wordle website:
+</p>
+<p>
+<pre>
+Wordle 248 4/6
+
+⬜💛⬜💛⬜
+⬜⬜💛⬜💚
+⬜💚💚💚💚
+💚💚💚💚💚
+</pre>
+</p>
+
+<p>
+And this was "How to play Wordle the UNIX way".
+</p>
+<p>
+Note: I replaced some square emojis with hearts because they weren't rendering and I had no idea how to make them render xD.
+</p>
+<footer>by <strong><a href='https://mazzensaadd.github.io/'>Mazen Saad</a></strong>
+<span class="date">February, 22 - 01:23:55</span></footer>
+</body>
+
+</html>
