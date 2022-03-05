@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Root Access with Chroot</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<h1>Root Access with Chroot</h1>
+<p>One night, I was tinkering around with my laptop doing an Archlinux
+install (pretty typical night, isn’t it?) and I was reading through the
+Archwiki page of the <strong>chroot</strong> command. If you’ve done an
+Arch install, you know what’s <strong>chroot</strong>, but if you
+didn’t, let me explain.</p>
+<p><strong>chroot</strong> enables you to change the apparent root
+directory for the current running process and their children. But what
+the heck does this mean? I will tell you. Let’s consider a situation
+where your <em>grub.cfg</em> file has been fucked up for some unknown
+reason and you can’t boot into the system. You know that the system is
+still there but you can’t boot into it because the bootloader is
+missing. What would you do? Wouldn’t it be great if there was a way to
+gain access to your OS without needing the bootloader at all? Then you
+can fix it and get everything up and running again, right? This is what
+<strong>chroot</strong> does. You boot your laptop using a bootable USB
+stick, running Linux of course. Then, you mount the partition containing
+the root directory of your OS. After that, you use the
+<strong>chroot</strong> command to change root into the disk you just
+mounted. Now, you have root privileges on this os without needing to
+open it. From here, you can fix your laptop and get grub working
+again.</p>
+<p>My thought was: “What if, instead of using it to fix broken laptops,
+I use it to break into laptops? Wouldn’t this work just fine?”. This was
+it. I grabbed my USB and flashed Endeavour OS on it. I then shut down my
+laptop and booted into the USB stick. I mounted the correct partition
+and chrooted into it and voalá, I now have root privileges on my machine
+without even needing to enter a single password.</p>
+<p>I felt so powerful at this moment. I thought I have breached the
+<em>Linux Security Myth</em>. Now, I can open anyone’s laptop and gain
+root privileges and, from there, I can do lots of things, add a user for
+me for example, to use his laptop without him knowing. Or I can change
+his password and mess around with him. I can now <em>hack</em> into any
+Linux machine that I have physical access to, right? Wrong.</p>
+<p>The only possible way to stop such an attack is to encrypt your hard
+disk (or your SSD if you can afford one xD). Encrypting will prevent
+anyone random person from mounting your hard and reading it, thus
+blocking any <strong>chroot</strong> attempt keeping you and your laptop
+secure.</p>
+<p>So, Kids, encrypt your disks and mess with your friends if you want
+hehe.</p>
+<footer>by <strong><a href='https://mazzensaadd.github.io/'>Mazen Saad</a></strong>
+<span class="date">March, 05 - 04:13:53</span></footer>
+</body>
+
+</html>
